@@ -7,4 +7,14 @@ public String decodeString(ArrayList<StringPart>parts){
     }
     return a;
  }
+ public ArrayList<StringPart> ecodeString(String word){
+    ArrayList<StringPart> a = new ArrayList<StringPart>();
+      while(word.length()!=0){
+      String part = findPart(word);
+      a.add(part);
+      word = word.substring(part.getLength());
+      }
+      return a;
+  }
+
   
