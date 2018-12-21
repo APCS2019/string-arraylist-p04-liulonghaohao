@@ -1,16 +1,14 @@
 public String decodeString(ArrayList<StringPart>parts){
   for(int i=0;i<parts.size();i++){
     String a="";
-    int a = parts.getStart(i);
-    int b = parts.getLength(i);
-    String a += new String(masterString.substring(a,a+b));
+    String a += masterString.substring(i.getStart(),i.getStart() + i.getLength())
     }
     return a;
  }
  public ArrayList<StringPart> ecodeString(String word){
     ArrayList<StringPart> a = new ArrayList<StringPart>();
       while(word.length()!=0){
-      String part = findPart(word);
+      StringPart part = findPart(word);
       a.add(part);
       word = word.substring(part.getLength());
       }
